@@ -1,0 +1,166 @@
+/* src/components/Header.css */
+
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Fija el header al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    /* Asegura que esté por encima de todo */
+    padding: 1rem 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* --- Navegación Desktop (Por defecto hidden en mobile first strategy, pero lo haremos al revés para claridad) --- */
+/* Mobile Styles First */
+.header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Oculto por defecto en móvil */
+    display: none;
+}
+
+/* Clase para mostrar menú en móvil */
+.header__nav.is-active {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.header__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.header__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s;
+    display: block;
+    padding: 0.5rem;
+}
+
+.header__link:hover {
+    color: var(--color-primary);
+}
+
+.header__link--cta {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    /* Para respetar padding */
+}
+
+/* --- Botón Hamburguesa --- */
+.header__toggle {
+    display: block;
+    /* Visible en móvil */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: all 0.3s;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Animación Hamburguesa a X */
+.hamburger.open {
+    background-color: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Desktop Styles (Media Query) --- */
+@media (min-width: 768px) {
+    .header__toggle {
+        display: none;
+        /* Ocultar botón en desktop */
+    }
+
+    .header__nav {
+        display: block;
+        /* Siempre visible */
+        position: static;
+        /* Restaurar flujo normal */
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+        background: transparent;
+        animation: none;
+    }
+
+    .header__list {
+        flex-direction: row;
+        /* Horizontal */
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,73 @@
+/* src/components/SobreMi.css */
+
+.sobre-mi {
+    background-color: var(--color-white);
+}
+
+.sobre-mi__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-mi__image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    border: 4px solid white;
+}
+
+.sobre-mi__content {
+    text-align: left;
+}
+
+.sobre-mi__content h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.sobre-mi__content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.sobre-mi__content p {
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+.sobre-mi__list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.sobre-mi__list li {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .sobre-mi__container {
+        flex-direction: row;
+        /* Lado a lado en desktop */
+        align-items: center;
+    }
+
+    .sobre-mi__image,
+    .sobre-mi__content {
+        flex: 1;
+        /* Ocupan 50% cada uno */
+    }
+
+    .sobre-mi__image {
+        padding-right: 2rem;
+    }
+}

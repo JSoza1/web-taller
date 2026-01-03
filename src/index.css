@@ -1,0 +1,72 @@
+/* Estilos Globales - Electricista Daniel */
+/* Definición de Variables (Custom Properties) para consistencia */
+:root {
+  /* Paleta de Colores Profesional */
+  --color-primary: #f59e0b; /* Ambar: Energía, electricidad, precaución */
+  --color-secondary: #0f172a; /* Azul oscure: Profesionalismo, confianza */
+  --color-text: #334155; /* Gris oscuro: Lectura cómoda */
+  --color-bg: #f8fafc; /* Blanco humo: Fondo limpio pero no chillón */
+  --color-white: #ffffff;
+  
+  /* Tipografía */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Espaciado base */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Transiciones */
+  --transition-fast: 0.3s ease;
+}
+
+/* Reset Básico y Moderno */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  scroll-behavior: smooth; /* Scroll suave nativo */
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Clientes y Utilidades */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+h1, h2, h3 {
+  color: var(--color-secondary);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Clases para efectos visuales (se activarán con JS) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}

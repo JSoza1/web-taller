@@ -1,0 +1,75 @@
+/* src/components/Clientes.css */
+
+.clientes {
+    background-color: #f1f5f9;
+    /* Fondo gris claro para diferenciar de sección blanca */
+}
+
+/* Flexbox Layout para centrado automático y elegante */
+.clientes__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cliente-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    /* Control de ancho para Flexbox */
+    flex: 1 1 300px;
+    /* Base ideal de 300px, crece si hay espacio */
+    max-width: 400px;
+    /* Un poco más ancha que servicios para que quepa bien el texto */
+}
+
+/* Comillas decorativas */
+.cliente-card::before {
+    content: '"';
+    font-size: 5rem;
+    color: #e2e8f0;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    font-family: serif;
+}
+
+.cliente-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cliente-card__avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cliente-card__name {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.cliente-card__stars {
+    font-size: 0.9rem;
+}
+
+.cliente-card__comment {
+    font-style: italic;
+    color: #475569;
+    line-height: 1.6;
+}
