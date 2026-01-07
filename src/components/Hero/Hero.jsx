@@ -7,7 +7,7 @@ const Hero = () => {
 
             <div className="container hero__content">
                 <h2 className="hero__title">
-                    Soluciones Eléctric <br />
+                    Soluciones Eléctricas <br />
                     <span className="hero__highlight">Profesionales y Seguras</span>
                 </h2>
 
