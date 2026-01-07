@@ -12,11 +12,21 @@ jobs:
     steps:
       - name: Checkout repo personal
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Push to business repo
+        env:
+          BUSINESS_REPO_TOKEN: ${{ secrets.BUSINESS_REPO_TOKEN }}
         run: |
           git config --global user.name "Jsoza1"
           git config --global user.email "jsoza993@gmail.com"
 
-          git remote add business https://x-access-token:${{ secrets.BUSINESS_REPO_TOKEN }}@github.com/SozaSystems/web-electricista.git
+          # Eliminar workflows antes del push
+          rm -rf .github/workflows
+
+          git remote remove business || true
+          git remote add business https://x-access-token:${BUSINESS_REPO_TOKEN}@github.com/SozaSystems/web-electricista.git
+
           git push business main --force
