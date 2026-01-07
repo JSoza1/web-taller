@@ -23,8 +23,10 @@ jobs:
           git config --global user.name "Jsoza1"
           git config --global user.email "jsoza993@gmail.com"
 
+          # Eliminar workflows antes del push
+          rm -rf .github/workflows
+
           git remote remove business || true
           git remote add business https://x-access-token:${BUSINESS_REPO_TOKEN}@github.com/SozaSystems/web-electricista.git
 
-          # Push SIN workflows
-          git push business main --force -- ':!.github/workflows/*'
+          git push business main --force
