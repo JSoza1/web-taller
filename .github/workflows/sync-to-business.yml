@@ -1,0 +1,22 @@
+name: Sync to business repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo personal
+        uses: actions/checkout@v4
+
+      - name: Push to business repo
+        run: |
+          git config --global user.name "Jsoza1"
+          git config --global user.email "jsoza993@gmail.com"
+
+          git remote add business https://x-access-token:${{ secrets.BUSINESS_REPO_TOKEN }}@github.com/SozaSystems/web-electricista.git
+          git push business main --force
