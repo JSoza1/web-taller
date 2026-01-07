@@ -1,0 +1,45 @@
+name: Sincronizar Espejo a SozaSystems
+
+# Controla cuándo se ejecuta la Action
+on:
+  push:
+    branches: [ main ] # Se activa cada vez que subes algo a la rama 'main'
+
+jobs:
+  mirror:
+    # SEGURIDAD: Solo corre si el repositorio es el de JSoza1. 
+    # Esto evita que el repo de SozaSystems intente sincronizarse a sí mismo.
+    if: github.repository == 'JSoza1/web-electricista'
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Paso 1: Descargar el código del repositorio actual
+      - name: Checkout del código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Trae todo el historial. Es vital para que el 'push --force' no falle.
+
+      # Paso 2: Preparar y enviar los cambios al segundo GitHub
+      - name: Sincronizar con SozaSystems
+        env:
+          # Aquí llamamos al secreto que se guardo en Settings
+          TOKEN: ${{ secrets.BUSINESS_REPO_TOKEN }}
+        run: |
+          # A. Configuración de usuario para Git (necesario para hacer commits)
+          git config --global user.name "Jsoza1"
+          git config --global user.email "jsoza993@gmail.com"
+          
+          # B. ELIMINAR WORKFLOWS:
+          # Esto borra la carpeta de Actions localmente antes de mandarla al espejo.
+          # Así, el repositorio de SozaSystems no tendrá Actions activas.
+          rm -rf .github/workflows
+          
+          # C. REGISTRAR CAMBIOS:
+          # Confirmamos el borrado de los workflows para que el repo destino esté limpio.
+          git add .
+          git commit -m "Mirror: Limpieza de workflows para el repositorio de negocio" || echo "Sin cambios que confirmar"
+          
+          # D. EL PUSH FINAL:
+          # Usamos la URL con el token de acceso para autenticarnos en la cuenta B.
+          # Forzamos el envío a la rama 'main' de SozaSystems.
+          git push --force https://x-access-token:${TOKEN}@github.com/SozaSystems/web-electricista.git main
