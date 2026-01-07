@@ -26,7 +26,7 @@ El objetivo es ofrecer una presencia online elegante, rápida y efectiva donde l
 *   JavaScript (ES6+)
 *   React 19
 *   Vite
-*   Netlify
+*   Vercel
 
 ---
 
@@ -45,7 +45,7 @@ src/
 
 ## 🔗 Visitar Sitio
 Puedes ver el proyecto en funcionamiento aquí:
-👉 **[https://electricistadaniel.netlify.app/]()**
+👉 **[electricistadaniel.vercel.app](https://electricistadaniel.vercel.app/)**
 
 ---
 

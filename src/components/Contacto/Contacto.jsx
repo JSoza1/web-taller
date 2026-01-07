@@ -20,7 +20,7 @@ const Contacto = () => {
                     <div className="contacto__info">
                         <p><strong>Email:</strong> contacto@electricistadaniel.com</p>
                         <p><strong>Teléfono:</strong> +54 9 11 1234 5678</p>
-                        <p><strong>Zona:</strong> Capital Federal y GBA</p>
+                        <p><strong>Zona:</strong> Norte y Oeste de Bs. As.</p>
                     </div>
                 </div>
             </div>
