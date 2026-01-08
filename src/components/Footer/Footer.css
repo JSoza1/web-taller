@@ -20,8 +20,17 @@
     letter-spacing: 1px;
 }
 
-.neon-link {
-    color: var(--color-accent);
-    font-weight: 800;
+.footer__author {
+    color: #ff6b00;
+    /* Color Neon Naranja Base */
     text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(255, 107, 0, 0.5);
+}
+
+.footer__author:hover {
+    color: #ffffff;
+    /* Blanco Fluor */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
