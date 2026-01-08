@@ -2,10 +2,24 @@
 
 .clientes {
     background-color: #f1f5f9;
-    /* Fondo gris claro para diferenciar de sección blanca */
+    /* Light gray background */
+    color: #1e293b;
+    /* Dark text base */
 }
 
-/* Flexbox Layout para centrado automático y elegante */
+/* Override global white text for this light section */
+.clientes h2,
+.clientes .section-subtitle,
+.clientes p {
+    color: #0f172a;
+}
+
+.clientes .section-subtitle {
+    color: var(--color-accent);
+    /* Keep accent for subtitle */
+}
+
+/* Flexbox Layout */
 .clientes__grid {
     display: flex;
     flex-wrap: wrap;
@@ -14,24 +28,22 @@
 }
 
 .cliente-card {
-    background-color: var(--color-white);
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-
-    /* Control de ancho para Flexbox */
     flex: 1 1 300px;
-    /* Base ideal de 300px, crece si hay espacio */
     max-width: 400px;
-    /* Un poco más ancha que servicios para que quepa bien el texto */
 }
 
 /* Comillas decorativas */
 .cliente-card::before {
     content: '"';
     font-size: 5rem;
-    color: #e2e8f0;
+    color: var(--color-accent);
+    /* Use accent for quotes */
+    opacity: 0.2;
     position: absolute;
     top: 0rem;
     right: 1rem;
@@ -48,8 +60,8 @@
 .cliente-card__avatar {
     width: 50px;
     height: 50px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-accent);
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -60,16 +72,20 @@
 
 .cliente-card__name {
     font-size: 1.1rem;
-    color: var(--color-secondary);
+    color: #0f172a;
+    /* Dark text */
     font-weight: 700;
 }
 
 .cliente-card__stars {
     font-size: 0.9rem;
+    color: #fbbf24;
+    /* Gold stars */
 }
 
 .cliente-card__comment {
     font-style: italic;
-    color: #475569;
+    color: #334155;
+    /* Dark gray for text */
     line-height: 1.6;
 }

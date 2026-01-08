@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer__container">
                 <p>Desarrollado por <a href="https://sozasystems.vercel.app/" className="neon-link" target="_blank" rel="noopener noreferrer">Soza Systems</a></p>
-                <p>Electricista Daniel © 2025</p>
+                <p>Taller Gustavo © 2025</p>
             </div>
         </footer>
     );

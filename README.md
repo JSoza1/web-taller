@@ -1,12 +1,12 @@
-# ⚡ Web Electricista - Soluciones Profesionales
+# 🚗 Taller Gustavo - Chapa y Pintura Premium
 
-> **Landing Page moderna y responsiva para servicios de electricidad e instalaciones.**
+> **Landing Page de Alto Rendimiento para Taller de Restauración y Estética Automotriz.**
 
 ---
 
 ## 📖 Descripción
-Este proyecto es una **Single Page Application (SPA)** diseñada para un profesional electricista independiente.
-El objetivo es ofrecer una presencia online elegante, rápida y efectiva donde los clientes puedan consultar servicios, ver testimonios y contactar fácilmente.
+Este proyecto es una **Landing Page** diseñada para "Taller Gustavo", un centro especializado en chapa, pintura y restauración vehicular.
+El diseño sigue una estética **Industrial / High Performance**, transmitiendo precisión, velocidad y calidad premium a través de una interfaz oscura, tipografía impactante y animaciones fluidas.
 
 ### Características Principales y Técnicas:
 *   ✅ **Diseño Responsivo:** Se adapta perfectamente a móviles, tablets y escritorio.
@@ -34,18 +34,22 @@ El objetivo es ofrecer una presencia online elegante, rápida y efectiva donde l
 
 ```bash
 src/
-├── 📂 components/      # Componentes modulares (Header, Hero, etc.)
-│   └── 📂 Header/      # Cada carpeta contiene su .jsx y .css
-├── 📂 data/            # Archivos de datos (textos, precios, info)
-├── 📂 hooks/           # Custom Hooks (Lógica reutilizable)
-└── 📄 App.jsx          # Componente principal y estructura semántica
+├── 📂 components/      
+│   ├── 📂 Header/          # Navegación estilo Cockpit
+│   ├── 📂 Hero/            # Layout diagonal con título masivo
+│   ├── 📂 BrandsTicker/    # Banner rotativo de marcas
+│   ├── 📂 Servicios/       # Sistema de pestañas interactivas
+│   ├── 📂 SobreMi/         # Grid de estadísticas y trayectoria
+│   └── ...
+├── 📂 data/            # Configuración de servicios y testimonios
+└── 📄 App.jsx          # Estructura principal
 ```
 
 ---
 
 ## 🔗 Visitar Sitio
 Puedes ver el proyecto en funcionamiento aquí:
-👉 **[electricistadaniel.vercel.app](https://electricistadaniel.vercel.app/)**
+👉 **[tallergustavo.vercel.app](https://tallergustavo.vercel.app/)**
 
 ---
 

@@ -1,27 +1,31 @@
-/* Estilos Globales - Electricista Daniel */
-/* Definición de Variables (Custom Properties) para consistencia */
-:root {
-  /* Paleta de Colores Profesional */
-  --color-primary: #f59e0b; /* Ambar: Energía, electricidad, precaución */
-  --color-secondary: #0f172a; /* Azul oscure: Profesionalismo, confianza */
-  --color-text: #334155; /* Gris oscuro: Lectura cómoda */
-  --color-bg: #f8fafc; /* Blanco humo: Fondo limpio pero no chillón */
-  --color-white: #ffffff;
-  
-  /* Tipografía */
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  
-  /* Espaciado base */
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 4rem;
+/* Estilos Globales - Taller Gustavo (Industrial Redesign) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;800&display=swap');
 
-  /* Transiciones */
-  --transition-fast: 0.3s ease;
+:root {
+  /* Paleta Industrial "Precision & Speed" */
+  --color-bg: #0a0a0a;
+  /* Casi negro total */
+  --color-surface: #141414;
+  /* Surface apenas visible */
+  --color-accent: #ff3300;
+  /* Rojo Racing Puro */
+  --color-accent-glow: rgba(255, 51, 0, 0.5);
+  --color-metal: #2a2a2a;
+  /* Gris metálico oscuro */
+
+  --color-text: #e5e5e5;
+  /* Blanco sucio */
+  --color-text-muted: #888888;
+  /* Gris mecánico */
+
+  --font-display: 'Archivo Black', sans-serif;
+  /* Títulos masivos */
+  --font-body: 'Manrope', sans-serif;
+  /* Lectura técnica */
+
+  --spacing-section: 120px;
 }
 
-/* Reset Básico y Moderno */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,44 +33,78 @@
 }
 
 html {
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
-  scroll-behavior: smooth; /* Scroll suave nativo */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* Critical for preventing horiz scroll */
+  width: 100%;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
+  /* Double safety */
+  width: 100%;
 }
 
-/* Clientes y Utilidades */
+/* Tipografía Masiva */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  word-wrap: break-word;
+  /* Prevent long words from breaking layout */
+}
+
+/* ... existing code ... */
+
 .container {
   width: 90%;
-  max-width: 1200px;
+  /* Slightly wider on mobile for more space */
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 1rem;
+  /* Add padding to prevent edge touching */
 }
 
-h1, h2, h3 {
-  color: var(--color-secondary);
-  line-height: 1.2;
+.section-padding {
+  padding: var(--spacing-section) 0;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+/* Utility: Diagonal Cut */
+.skew-bg {
+  transform: skewY(-3deg);
+  background: var(--color-surface);
 }
 
-/* Clases para efectos visuales (se activarán con JS) */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, visibility;
+.skew-fix {
+  transform: skewY(3deg);
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
+/* Utility: Button Racing */
+.btn-racing {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 1.2rem 3rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  /* Rhombus shape */
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-racing:hover {
+  background: #fff;
+  color: #000;
+  transform: translateX(5px);
 }

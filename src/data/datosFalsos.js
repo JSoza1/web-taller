@@ -3,47 +3,47 @@
 export const serviciosData = [
     {
         id: 1,
-        titulo: 'Instalaciones Eléctricas',
-        descripcion: 'Cableado completo para obra nueva y reformas. Instalación de cuadros eléctricos bajo normativa.',
-        icono: '⚡'
+        titulo: 'Chapa y Carrocería',
+        descripcion: 'Reparación de abolladuras, golpes y daños estructurales. Recuperamos la línea original de su vehículo.',
+        imagen: '/images/chapa_soldadura.png'
     },
     {
         id: 2,
-        titulo: 'Reparación de Averías',
-        descripcion: 'Solución rápida a cortocircuitos, apagones y problemas de potencia. Servicio de urgencia.',
-        icono: '🔧'
+        titulo: 'Pintura Profesional',
+        descripcion: 'Cabina de pintura presurizada, colorimetría computarizada y acabados originales de fábrica.',
+        imagen: '/images/pintura.png'
     },
     {
         id: 3,
-        titulo: 'Iluminación LED',
-        descripcion: 'Diseño e instalación de iluminación eficiente para reducir tu consumo y mejorar la estética.',
-        icono: '💡'
+        titulo: 'Pulido y Tratamientos',
+        descripcion: 'Restauración de brillo, tratamientos cerámicos y protección de la pintura contra agentes externos.',
+        imagen: '/images/pulido.png'
     },
     {
         id: 4,
-        titulo: 'Automatización',
-        descripcion: 'Automatización de tanques de agua, para el hogar y el negocio',
-        icono: '💧'
+        titulo: 'Reparación de Plásticos',
+        descripcion: 'Soldadura y reconstrucción de paragolpes, espejos y molduras plásticas.',
+        imagen: '/images/plasticos_v2.png'
     },
 ];
 
 export const clientesData = [
     {
         id: 1,
-        nombre: 'Ana García',
-        comentario: 'Excelente profesional. Llegó puntual y solucionó el problema del cuadro eléctrico rápidamente.',
+        nombre: 'Roberto Mendez',
+        comentario: 'Increíble trabajo de restauración en mi Camaro del 74. La atención al detalle en la pintura es de otro nivel.',
         estrellas: 5
     },
     {
         id: 2,
-        nombre: 'Carlos Rodríguez',
-        comentario: 'Muy recomendable. Me instaló toda la iluminación LED del local y quedó perfecto.',
+        nombre: 'Valeria Soria',
+        comentario: 'Tuve un choque fuerte en la puerta y el guardabarros. El auto quedó como si recién saliera de fábrica. Super recomendados.',
         estrellas: 5
     },
     {
         id: 3,
-        nombre: 'Marta Pérez',
-        comentario: 'Precio justo y trabajo limpio. Daniel es muy amable y explica todo lo que hace.',
-        estrellas: 4
+        nombre: 'Jorge Almirón',
+        comentario: 'Cumplieron con el plazo prometido y el presupuesto fue exacto. Muy profesionales y el taller es impecable.',
+        estrellas: 5
     }
 ];

@@ -12,6 +12,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 import { serviciosData, clientesData } from './data/datosFalsos';
 // import './App.css' // Eliminamos estilos específicos de App por ahora
 
+import BrandsTicker from './components/BrandsTicker/BrandsTicker';
+
 function App() {
   // Inicializamos el efecto de scroll
   useScrollReveal();
@@ -19,8 +21,9 @@ function App() {
   return (
     <div className="app-container">
       <Header />
+      <Hero />
+      <BrandsTicker />
       <main>
-        <Hero />
         <Servicios servicios={serviciosData} />
         <SobreMi />
         <Clientes clientes={clientesData} />

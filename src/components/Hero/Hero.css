@@ -1,120 +1,112 @@
 /* src/components/Hero.css */
-
 .hero {
-    position: relative;
-    height: 80vh;
-    /* Ocupa el 80% de la altura de la ventana */
-    min-height: 500px;
-    /* Imagen de fallback por si falla la carga */
-    background-color: #334155;
-    /* Nueva imagen: Técnico electricista revisando panel */
-    background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center top;
-    /* Alineado arriba para ver caras/cabezas mejor */
-    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    color: var(--color-white);
-    text-align: center;
+    flex-direction: column;
+    /* Mobile first stack */
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Header space */
+    position: relative;
+    overflow: hidden;
 }
 
-/* Capa oscura superpuesta */
-.hero__overlay {
+.hero__split {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__split--left {
+    padding: 2rem;
+    background: var(--color-bg);
+    z-index: 2;
+}
+
+.hero__content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.hero__label {
+    display: block;
+    color: var(--color-accent);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    /* Reduced from 4rem for mobile */
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    word-break: break-word;
+    /* Prevent overflow */
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    opacity: 0.5;
+}
+
+.hero__subtitle {
+    margin-bottom: 3rem;
+    max-width: 450px;
+    border-left: 2px solid var(--color-accent);
+    padding-left: 1.5rem;
+}
+
+/* Right Side (Image) */
+.hero__split--right {
+    position: relative;
+    min-height: 400px;
+    /* Space for image on mobile */
+    background-image: url('/images/hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay gradient for image */
+.hero__split--right::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.7);
-    /* Azul oscuro con opacidad */
-    z-index: 1;
+    background: linear-gradient(to top, var(--color-bg), transparent);
 }
 
-.hero__content {
-    position: relative;
-    z-index: 2;
-    /* Encima del overlay */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.hero__title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--color-white);
-    margin-bottom: 0.5rem;
-}
-
-.hero__highlight {
-    color: var(--color-primary);
-}
-
-.hero__subtitle {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-/* Botones reutilizables (podrían ir en index.css) */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.btn--primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.btn--primary:hover {
-    background-color: #d97706;
-    /* Un tono más oscuro */
-    transform: translateY(-2px);
-}
-
-.btn--outline {
-    background-color: transparent;
-    border-color: var(--color-white);
-    color: var(--color-white);
-    margin-left: 1rem;
-}
-
-.btn--outline:hover {
-    background-color: var(--color-white);
-    color: var(--color-secondary);
-}
-
-.hero__actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    /* Para móviles muy pequeños */
-    justify-content: center;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hero {
-        text-align: left;
-        /* Alinear a izquierda en desktop si se prefiere, o dejar centrado */
+        flex-direction: row;
+        height: 100vh;
+        padding-top: 0;
+    }
+
+    .hero__split--left {
+        justify-content: flex-end;
+        /* Push content to center seam */
+        padding-right: 4rem;
+    }
+
+    .hero__split--right {
+        /* Diagonal Cut Magic */
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: -100px;
+        /* Overlap */
+    }
+
+    .hero__split--right::after {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+        /* Shadow on cut edge */
     }
 
     .hero__title {
-        font-size: 3.5rem;
-    }
-
-    .hero__content {
-        align-items: center;
-        /* Mantener centrado para landing page clásica */
+        font-size: 5rem;
+        /* Reduced from 6rem */
     }
 }

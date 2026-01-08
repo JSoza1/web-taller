@@ -1,73 +1,98 @@
 /* src/components/SobreMi.css */
-
-.sobre-mi {
-    background-color: var(--color-white);
+.sobre-mi__grid {
+    display: grid;
+    gap: 4rem;
+    width: 100%;
+    /* Keep width for safety */
 }
 
-.sobre-mi__container {
+/* Remove complex text wrapping that caused layout issues */
+.sobre-mi__text {
+    /* No overflow/width hacks */
+}
+
+.sobre-mi__text h2 {
+    font-size: 3rem;
+    /* Return to original large size */
+    margin-bottom: 2rem;
+}
+
+.stat-item {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    align-items: center;
 }
 
-.sobre-mi__image img {
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    height: auto;
-    border: 4px solid white;
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-accent);
+    line-height: 1;
 }
 
-.sobre-mi__content {
-    text-align: left;
-}
-
-.sobre-mi__content h2 {
-    font-size: 1rem;
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
+    color: #fff;
 }
 
-.sobre-mi__content h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-secondary);
+.stats-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    /* Keep simple wrap for mobile */
 }
 
-.sobre-mi__content p {
-    margin-bottom: 1rem;
-    color: #475569;
+/* Restored Image Styles */
+.sobre-mi__visual {
+    position: relative;
+    padding: 2rem;
+    max-width: 100%;
+    /* Safety */
 }
 
-.sobre-mi__list {
-    list-style: none;
-    margin-top: 1.5rem;
+.about-img {
+    width: 100%;
+    max-width: 100%;
+    /* Prevent overflow */
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
 }
 
-.sobre-mi__list li {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--color-secondary);
+.about-img:hover {
+    filter: grayscale(0%);
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-    .sobre-mi__container {
-        flex-direction: row;
-        /* Lado a lado en desktop */
+.decoration-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    border: 10px solid var(--color-metal);
+    z-index: 1;
+}
+
+@media (min-width: 900px) {
+    .sobre-mi__grid {
+        grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 5rem;
     }
 
-    .sobre-mi__image,
-    .sobre-mi__content {
-        flex: 1;
-        /* Ocupan 50% cada uno */
+    .sobre-mi__text h2 {
+        font-size: 3.5rem;
+        /* Restore large size on Desktop */
     }
 
-    .sobre-mi__image {
-        padding-right: 2rem;
+    .stats-row {
+        gap: 3rem;
     }
 }

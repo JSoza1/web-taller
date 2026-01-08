@@ -14,7 +14,7 @@ const Clientes = ({ clientes }) => {
                     <h2>Opiniones de Clientes</h2>
                     <p>Lo que dicen quienes han confiado en mi trabajo</p>
                 </div>
-
+                <br />
                 <div className="clientes__grid">
                     {clientes.map((cliente) => (
                         <div key={cliente.id} className="cliente-card fade-in-section">

@@ -1,66 +1,60 @@
 /* src/components/Contacto.css */
-
 .contacto {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    text-align: center;
-}
-
-.contacto__container {
-    max-width: 800px;
+    background: var(--color-bg);
+    position: relative;
+    border-top: 5px solid var(--color-accent);
+    /* Racing stripe */
 }
 
 .contacto__content h2 {
-    color: var(--color-white);
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.contacto__content p {
-    color: #94a3b8;
-    /* Gris azulado claro */
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-}
-
-.btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #25D366;
-    /* Verde WhatsApp */
-    color: var(--color-white);
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 3rem;
-}
-
-.btn-whatsapp:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-icon {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 .contacto__info {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    border: 1px solid var(--color-metal);
+    padding: 2rem;
+    background: var(--color-surface);
+}
+
+.contacto__info p {
+    font-size: 1.1rem;
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.contacto__info p {
-    margin: 0;
-    font-size: 1rem;
+.contacto__info strong {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.contacto__info strong {
-    color: var(--color-primary);
+/* WhatsApp Button - Kept prominent but styled */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #25D366;
+    color: #000;
+    padding: 1.5rem 3rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #fff;
+    transform: scale(1.05);
 }
