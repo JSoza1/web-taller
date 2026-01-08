@@ -2,8 +2,9 @@ import './FloatingWhatsApp.css';
 
 const FloatingWhatsApp = () => {
     // Reemplaza este número con el real
-    const phoneNumber = "5491168096768";
-    const message = "Hola! Quisiera hacer una consulta sobre un trabajo eléctrico.";
+    // Reemplaza este número con el real
+    const phoneNumber = "5491181077576";
+    const message = "Hola! Quisiera hacer una consulta sobre un presupuesto de chapa y pintura.";
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

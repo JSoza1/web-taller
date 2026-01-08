@@ -64,7 +64,7 @@
     position: relative;
     min-height: 400px;
     /* Space for image on mobile */
-    background-image: url('/images/hero.png');
+    background-image: url('../../assets/images/hero.png');
     background-size: cover;
     background-position: center;
 }

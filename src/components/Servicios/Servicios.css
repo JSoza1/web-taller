@@ -7,6 +7,11 @@
     margin-bottom: 0.5rem;
 }
 
+.section-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.1rem;
+}
+
 .highlight {
     color: var(--color-text-muted);
     /* Contrast */
@@ -125,6 +130,12 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media (min-width: 600px) {
+    .section-header h2 {
+        font-size: 3rem;
     }
 }
 

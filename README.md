@@ -34,13 +34,17 @@ El diseño sigue una estética **Industrial / High Performance**, transmitiendo 
 
 ```bash
 src/
+├── 📂 assets/          # Imágenes e iconos optimizados
 ├── 📂 components/      
-│   ├── 📂 Header/          # Navegación estilo Cockpit
-│   ├── 📂 Hero/            # Layout diagonal con título masivo
-│   ├── 📂 BrandsTicker/    # Banner rotativo de marcas
-│   ├── 📂 Servicios/       # Sistema de pestañas interactivas
-│   ├── 📂 SobreMi/         # Grid de estadísticas y trayectoria
-│   └── ...
+│   ├── 📂 Header/           # Navegación estilo Cockpit
+│   ├── 📂 Hero/             # Layout diagonal con título masivo
+│   ├── 📂 BrandsTicker/     # Banner rotativo de marcas
+│   ├── 📂 Servicios/        # Sistema de pestañas interactivas
+│   ├── 📂 SobreMi/          # Grid de estadísticas y trayectoria
+│   ├── 📂 Clientes/         # Carrusel de testimonios
+│   ├── 📂 Contacto/         # Información y botones de acción
+│   ├── 📂 FloatingWhatsApp/ # Botón flotante de consulta rápida
+│   └── 📂 Footer/           # Cierre del sitio y enlaces legales
 ├── 📂 data/            # Configuración de servicios y testimonios
 └── 📄 App.jsx          # Estructura principal
 ```

@@ -1,5 +1,6 @@
 /* src/components/SobreMi/SobreMi.jsx */
 import './SobreMi.css';
+import aboutImg from '../../assets/images/about.png';
 
 const SobreMi = () => {
     return (
@@ -9,6 +10,13 @@ const SobreMi = () => {
                     <div className="sobre-mi__text">
                         <span className="section-subtitle">NUESTRA HISTORIA</span>
                         <h2>MÁS DE <span className="highlight">40 AÑOS</span> <br /> DE EXPERIENCIA</h2>
+
+                        {/* Visual para Móvil (insertado entre título y texto) */}
+                        <div className="sobre-mi__visual sobre-mi__visual--mobile">
+                            <img src={aboutImg} alt="Taller" className="about-img mobile-img" />
+                            <div className="decoration-box"></div>
+                        </div>
+
                         <br />
                         <p>
                             Contamos con una amplia trayectoria trabajando con todo tipo de vehículos,
@@ -30,11 +38,15 @@ const SobreMi = () => {
                                 <span className="stat-number">24h</span>
                                 <span className="stat-label">Presupuestos</span>
                             </div>
+                            <div className="stat-item">
+                                <span className="stat-number">100%</span>
+                                <span className="stat-label">Color Exacto</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="sobre-mi__visual">
-                        <img src="/images/about.png" alt="Taller" className="about-img main-img" />
+                    <div className="sobre-mi__visual sobre-mi__visual--desktop">
+                        <img src={aboutImg} alt="Taller" className="about-img main-img" />
                         <div className="decoration-box"></div>
                     </div>
                 </div>

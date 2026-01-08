@@ -9,7 +9,7 @@ const Contacto = () => {
                     <p>Estamos disponibles para asesorarte y ofrecerte el mejor presupuesto. Envíanos fotos por WhatsApp para una valoración rápida.</p>
 
                     <a
-                        href="https://wa.me/5491168096768"
+                        href="https://wa.me/5491181077576?text=Hola!%20Quisiera%20hacer%20una%20consulta%20sobre%20un%20presupuesto%20de%20chapa%20y%20pintura."
                         className="btn-whatsapp"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -18,9 +18,9 @@ const Contacto = () => {
                     </a>
 
                     <div className="contacto__info">
-                        <p><strong>Email:</strong> contacto@tallergustavo.com</p>
-                        <p><strong>Teléfono:</strong> +54 9 11 6809 6768</p>
-                        <p><strong>Ubicación:</strong> Zona Norte, Bs. As.</p>
+                        <p><strong>Email:</strong> rulochapa@live.com</p>
+                        <p><strong>Teléfono:</strong> +54 9 11 8107 7576</p>
+                        <p><strong>Ubicación:</strong> Bs. As.</p>
                     </div>
                 </div>
             </div>

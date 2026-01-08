@@ -1,29 +1,33 @@
 // src/data/datosFalsos.js
+import chapaImg from '../assets/images/chapa_soldadura.png';
+import pinturaImg from '../assets/images/pintura.png';
+import pulidoImg from '../assets/images/pulido.png';
+import plasticosImg from '../assets/images/plasticos_v2.png';
 
 export const serviciosData = [
     {
         id: 1,
         titulo: 'Chapa y Carrocería',
         descripcion: 'Reparación de abolladuras, golpes y daños estructurales. Recuperamos la línea original de su vehículo.',
-        imagen: '/images/chapa_soldadura.png'
+        imagen: chapaImg
     },
     {
         id: 2,
         titulo: 'Pintura Profesional',
         descripcion: 'Cabina de pintura presurizada, colorimetría computarizada y acabados originales de fábrica.',
-        imagen: '/images/pintura.png'
+        imagen: pinturaImg
     },
     {
         id: 3,
         titulo: 'Pulido y Tratamientos',
         descripcion: 'Restauración de brillo, tratamientos cerámicos y protección de la pintura contra agentes externos.',
-        imagen: '/images/pulido.png'
+        imagen: pulidoImg
     },
     {
         id: 4,
         titulo: 'Reparación de Plásticos',
         descripcion: 'Soldadura y reconstrucción de paragolpes, espejos y molduras plásticas.',
-        imagen: '/images/plasticos_v2.png'
+        imagen: plasticosImg
     },
 ];
 
@@ -31,7 +35,7 @@ export const clientesData = [
     {
         id: 1,
         nombre: 'Roberto Mendez',
-        comentario: 'Increíble trabajo de restauración en mi Camaro del 74. La atención al detalle en la pintura es de otro nivel.',
+        comentario: 'Llevé mi auto por un choque y Gustavo me asesoró 10 puntos. El color quedó idéntico al original, imposible notar la diferencia. Muy agradecido.',
         estrellas: 5
     },
     {

@@ -7,14 +7,15 @@
 }
 
 /* Remove complex text wrapping that caused layout issues */
-.sobre-mi__text {
-    /* No overflow/width hacks */
-}
+
 
 .sobre-mi__text h2 {
-    font-size: 3rem;
-    /* Return to original large size */
+    font-size: 2rem;
     margin-bottom: 2rem;
+}
+
+.sobre-mi__text p {
+    text-align: justify;
 }
 
 .stat-item {
@@ -24,7 +25,8 @@
 
 .stat-number {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2.6rem;
+    /* Default for mobile/tablet */
     color: var(--color-accent);
     line-height: 1;
 }
@@ -37,13 +39,12 @@
 }
 
 .stats-row {
-    display: flex;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-top: 3rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
-    flex-wrap: wrap;
-    /* Keep simple wrap for mobile */
 }
 
 /* Restored Image Styles */
@@ -52,6 +53,28 @@
     padding: 2rem;
     max-width: 100%;
     /* Safety */
+}
+
+/* Logic for Mobile/Desktop Visual switch */
+.sobre-mi__visual--mobile {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 0;
+    /* Reduce padding on mobile for better fit inside text flow */
+}
+
+.sobre-mi__visual--desktop {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .sobre-mi__visual--mobile {
+        display: none;
+    }
+
+    .sobre-mi__visual--desktop {
+        display: block;
+    }
 }
 
 .about-img {
@@ -80,6 +103,12 @@
     z-index: 1;
 }
 
+@media (min-width: 600px) {
+    .sobre-mi__text h2 {
+        font-size: 3rem;
+    }
+}
+
 @media (min-width: 900px) {
     .sobre-mi__grid {
         grid-template-columns: 1fr 1fr;
@@ -93,6 +122,14 @@
     }
 
     .stats-row {
+        display: flex;
         gap: 3rem;
+        justify-content: space-between;
+        /* Spread them out */
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        /* Even smaller on desktop to fit well */
     }
 }
