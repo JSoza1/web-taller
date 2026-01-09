@@ -45,7 +45,7 @@ const Servicios = ({ servicios }) => {
                         </div>
 
                         <div className="service-info">
-                            <h3>{activeService.titulo}</h3>
+                            <h2>{activeService.titulo}</h2>
                             <p>{activeService.descripcion}</p>
                         </div>
                     </div>

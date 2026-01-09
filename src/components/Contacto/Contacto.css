@@ -7,7 +7,7 @@
 }
 
 .contacto__content h2 {
-    font-size: 1.23rem;
+    font-size: 1.12rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
@@ -47,7 +47,7 @@
     padding: 1rem 2rem;
     /* Reduced padding */
     font-family: var(--font-display);
-    font-size: 0.9rem;
+    font-size: 0.87rem;
     /* Reduced font size */
     text-transform: uppercase;
     text-decoration: none;

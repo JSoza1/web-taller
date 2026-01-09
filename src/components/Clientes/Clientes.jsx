@@ -12,6 +12,7 @@ const Clientes = ({ clientes }) => {
             <div className="container">
                 <div className="section-header text-center">
                     <h2>Opiniones de Clientes</h2>
+                    <br />
                     <p>Lo que dicen quienes han confiado en mi trabajo</p>
                 </div>
                 <br />
