@@ -1,6 +1,6 @@
 /* src/components/SobreMi/SobreMi.jsx */
 import './SobreMi.css';
-import aboutImg from '../../assets/images/about.png';
+import aboutImg from '../../assets/images/about.webp';
 
 const SobreMi = () => {
     return (

@@ -1,8 +1,8 @@
 // src/data/datosFalsos.js
-import chapaImg from '../assets/images/chapa_soldadura.png';
-import pinturaImg from '../assets/images/pintura.png';
-import pulidoImg from '../assets/images/pulido.png';
-import plasticosImg from '../assets/images/plasticos_v2.png';
+import chapaImg from '../assets/images/chapa_soldadura.webp';
+import pinturaImg from '../assets/images/pintura.webp';
+import pulidoImg from '../assets/images/pulido.webp';
+import plasticosImg from '../assets/images/plasticos_v2.webp';
 
 export const serviciosData = [
     {
